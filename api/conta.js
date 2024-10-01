@@ -36,15 +36,18 @@ function calcular_x(i) {
 }
 
 function calcular_recursivo(m, n) {
-    i = m
-
+    
+    console.log(`${m} <= ${n}`)
     resul_rec = 1
-    if (i <= n) {
-        i = i + 1
-        resul_rec = calcular_recursivo(i)
+    if (m < n) {
+        
+        resul_rec = calcular_recursivo( m + 1, n)
+    } else {
+        
     }
 
-    restul = calcular_x(i) * resul_rec
+    console.log(m)
+    restul = calcular_x(m) * resul_rec
 
     return restul
 }
