@@ -38,14 +38,15 @@ function calcular_x(i) {
 function calcular_recursivo(m, n) {
     i = m
 
+    resul_rec = 1
     if (i <= n) {
-        resultado = calcular_x(i) * calcular_recursivo(i)
-    } else   {
-        resultado = resultado * calcular_x(i)
+        i = i + 1
+        resul_rec = calcular_recursivo(i)
     }
 
-    return resultado
-    
+    restul = calcular_x(i) * resul_rec
+
+    return restul
 }
 
 async function about(req, res) {
